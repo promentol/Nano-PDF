@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nano-pdf"
+version = "0.1.0"
+description = "A CLI tool to edit PDF slides using Nano Banana (Gemini 3 Pro Image)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Gavriel", email = "gavrielcohen89@gmail.com"}
+]
+dependencies = [
+    "typer[all]",
+    "pdf2image",
+    "pypdf",
+    "pytesseract",
+    "google-genai>=1.52.0",
+    "python-dotenv",
+    "Pillow"
+]
+
+[project.scripts]
+nano-pdf = "nano_pdf.main:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nano_pdf*"]

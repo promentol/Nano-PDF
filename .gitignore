@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+venv/
+*.pdf
+!sample_deck.pdf
+.DS_Store
+debug_*.png
+debug_*.txt
+temp_page_*.pdf
